@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duftdose bewerten & Weihnachtsduft sichern – Schreiber Essenzen</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #0a1628;
+      color: #f0e6d3;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .snowflakes { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    .snowflake {
+      position: absolute; top: -20px; color: #fff;
+      animation: fall linear infinite;
+    }
+    @keyframes fall { to { transform: translateY(105vh) rotate(360deg); opacity: 0; } }
+    .container { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; padding: 40px 20px 60px; }
+    .brand { text-align: center; margin-bottom: 28px; }
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: #c8a96e;
+    }
+    .card {
+      background: linear-gradient(160deg, #1a2a4a 0%, #0e1e38 100%);
+      border: 1px solid rgba(200,169,110,0.3);
+      border-radius: 20px; padding: 48px 44px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+      text-align: center;
+    }
+    .hero { font-size: 3.8rem; margin-bottom: 4px; display: block; filter: drop-shadow(0 0 24px rgba(255,180,50,0.55)); }
+    .stars { color: #c8a96e; font-size: 1rem; margin-bottom: 24px; letter-spacing: 6px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 1.95rem; line-height: 1.28; color: #f5e6c8; margin-bottom: 12px; }
+    .subtitle { font-size: 0.85rem; color: #8aa0b8; text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 28px; }
+    .divider { border: none; border-top: 1px solid rgba(200,169,110,0.2); margin: 28px 0; }
+    .body-text { font-size: 1.02rem; line-height: 1.78; color: #cdd8e3; margin-bottom: 24px; }
+    .body-text strong { color: #f5e6c8; }
+    .highlight {
+      background: rgba(200,169,110,0.09);
+      border: 1px solid rgba(200,169,110,0.28);
+      border-radius: 14px; padding: 20px 22px;
+      margin: 24px 0; display: flex; align-items: center; gap: 16px; text-align: left;
+    }
+    .highlight-icon { font-size: 2rem; flex-shrink: 0; }
+    .highlight-text { font-size: 0.93rem; line-height: 1.62; color: #e0ccaa; }
+    .highlight-text strong { color: #f5e6c8; display: block; margin-bottom: 3px; }
+    .steps { text-align: left; margin: 24px 0 8px; }
+    .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+    .step-num {
+      background: linear-gradient(135deg, #c8a96e, #e8c87a);
+      color: #0a1628; font-weight: 700; font-size: 0.8rem;
+      width: 27px; height: 27px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .step-text { font-size: 0.94rem; line-height: 1.58; color: #cdd8e3; }
+    .step-text strong { color: #f5e6c8; }
+    .cta-btn {
+      display: inline-block; margin-top: 32px; padding: 17px 42px;
+      background: linear-gradient(135deg, #c8a96e, #e8c87a);
+      color: #0a1628; text-decoration: none; border-radius: 50px;
+      font-weight: 700; font-size: 1.05rem; letter-spacing: 0.04em;
+      box-shadow: 0 8px 30px rgba(200,169,110,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(200,169,110,0.52); }
+    .cta-sub { margin-top: 11px; font-size: 0.78rem; color: #5a7590; }
+    .signature {
+      margin-top: 36px; padding-top: 24px;
+      border-top: 1px solid rgba(200,169,110,0.15);
+      font-size: 0.88rem; color: #8aa0b8; line-height: 1.75;
+    }
+    .signature strong { font-family: 'Playfair Display', serif; color: #c8a96e; font-size: 1rem; }
+    .footer { text-align: center; margin-top: 28px; font-size: 0.73rem; color: #3e5870; line-height: 1.65; }
+    @media(max-width:480px) { .card { padding: 32px 22px; } h1 { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+<div class="snowflakes" id="sf"></div>
+<div class="container">
+  <div class="brand"><span class="brand-name">Schreiber Essenzen · seit 1922</span></div>
+  <div class="card">
+    <span class="hero">🕯️</span>
+    <div class="stars">✦ ✦ ✦</div>
+    <h1>Herzlichen Dank<br>für Ihren Kauf!</h1>
+    <p class="subtitle">Ein kleines Dankeschön von uns für Sie</p>
+    <hr class="divider">
+    <p class="body-text">
+      Wir freuen uns sehr, dass Sie sich für eine unserer Duftdosen entschieden haben
+      und hoffen, dass Sie die <strong>feine Duftqualität aus über 100 Jahren Erfahrung</strong>
+      in unserer Manufaktur in vollen Zügen genießen.
+    </p>
+    <div class="highlight">
+      <span class="highlight-icon">🎁</span>
+      <div class="highlight-text">
+        <strong>Ihre Überraschung: Weihnachtsduftdose gratis!</strong>
+        Hinterlassen Sie uns eine ehrliche Bewertung auf Amazon – und wir schenken Ihnen
+        unsere exklusive <em>Christmas Fragrance</em> Duftdose. Ganz ohne Aufpreis,
+        direkt zu Ihnen nach Hause.
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Besuchen Sie Ihre Bestellung auf Amazon und hinterlassen Sie eine <strong>ehrliche Bewertung</strong> zu Ihrer Duftdose.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Machen Sie einen <strong>Screenshot</strong> Ihrer veröffentlichten Bewertung (auf Amazon sichtbar).</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Klicken Sie auf den Button unten und schicken Sie uns Ihren Screenshot samt <strong>Ihrer Lieferadresse</strong> per E-Mail – wir senden Ihnen die Weihnachtsduftdose umgehend zu.</div>
+      </div>
+    </div>
+    <a class="cta-btn" href="#" id="cta">🎄 Jetzt Bewertung einreichen</a>
+    <p class="cta-sub">Öffnet Ihr E-Mail-Programm mit vorausgefüllter Adresse &amp; Betreff</p>
+    <div class="signature">
+      <p>Wir wünschen Ihnen eine wunderschöne Vorweihnachtszeit 🌟</p>
+      <br>
+      <strong>Ihr Team von Schreiber Essenzen</strong><br>
+      Duftmanufaktur seit 1922 &middot; Barsbüttel
+    </div>
+  </div>
+  <div class="footer">
+    Diese Seite richtet sich ausschließlich an Käufer unserer Duftdosen-Produkte.<br>
+    Keine Teilnahmepflicht. Das Angebot gilt solange der Vorrat reicht.
+  </div>
+</div>
+<script>
+  // Snowflakes
+  const sf = document.getElementById('sf');
+  ['❄','❅','❆','·','✦'].forEach(f => {
+    for(let i=0;i<7;i++){
+      const el=document.createElement('span');
+      el.className='snowflake';
+      el.textContent=f;
+      el.style.cssText=`left:${Math.random()*100}vw;font-size:${0.5+Math.random()*1.3}em;opacity:${0.15+Math.random()*0.55};animation-duration:${7+Math.random()*13}s;animation-delay:${Math.random()*12}s`;
+      sf.appendChild(el);
+    }
+  });
+
+  // Mailto
+  const email = 'info@schreiber-essenzen.de';
+  const subject = encodeURIComponent('Bewertung Duftdose – Weihnachtsduftdose anfordern');
+  const body = encodeURIComponent(
+    'Hallo liebes Schreiber Essenzen Team,\n\n' +
+    'ich habe eine Bewertung zu meiner Duftdose auf Amazon abgegeben und hänge den Screenshot anbei.\n\n' +
+    'Bitte sendet mir die Weihnachtsduftdose an folgende Adresse:\n\n' +
+    'Name: \n' +
+    'Straße + Hausnummer: \n' +
+    'PLZ + Ort: \n' +
+    'Land: \n\n' +
+    'Vielen Dank und schöne Grüße!'
+  );
+  document.getElementById('cta').href = 'mailto:'+email+'?subject='+subject+'&body='+body;
+</script>
+</body>
+</html>
